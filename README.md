@@ -1,27 +1,26 @@
-UP Técnicas Avanzadas de Programación
+# UP Técnicas Avanzadas de Programación
 
-Microservicio para validar token JWT
+## Microservicio para validar token JWT
+
+* Endpoints:
+  * GET /validate
+    * Función:
+      * Comprobar la validez del token de usuario.
+    * Requiere:
+      * Token JWT en el header del request.
+    * Retorna:
+      * HTTP code 200 si es válido.
+        Datos en body { “sub” : “_user_”, “name” : “_username_” ,“admin” : true/false }
+      * HTTP code 400 si el request está mal formado.
+        Mensaje de error en el body { “error” : “error message” }
+      * HTTP code 401 si el token no es válido.
+        Mensaje de error en el body { “error” : “error message” }...
+
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
-Endpoints:
-GET /validate
-  Función: 
-    Comprobar la validez del token de usuario.
-  Requiere: 
-    Token JWT en el header del request.
-  Retorna: 
-    HTTP code 200 si es válido.
-      Datos en body { “sub” : “_user_”, “name” : “_username_” ,“admin” : true/false }
-    HTTP code 400 si el request está mal formado.
-      Mensaje de error en el body { “error” : “error message” }
-    HTTP code 401 si el token no es válido.
-      Mensaje de error en el body { “error” : “error message” }
-
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
-Para correr localmente
-clone https://github.com/murruni/TAP_token_validator.git
+Para correr localmente<br>
+clone https://github.com/murruni/TAP_token_validator.git<br>
 cd app
 npm install
 node index.js
