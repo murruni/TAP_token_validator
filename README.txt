@@ -1,3 +1,44 @@
+UP Técnicas Avanzadas de Programación
+
+Microservicio para validar token JWT
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+Endpoints:
+GET /validate
+  Función: 
+    Comprobar la validez del token de usuario.
+  Requiere: 
+    Token JWT en el header del request.
+  Retorna: 
+    HTTP code 200 si es válido.
+      Datos en body { “sub” : “_user_”, “name” : “_username_” ,“admin” : true/false }
+    HTTP code 400 si el request está mal formado.
+      Mensaje de error en el body { “error” : “error message” }
+    HTTP code 401 si el token no es válido.
+      Mensaje de error en el body { “error” : “error message” }
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+Para correr localmente
+clone https://github.com/murruni/TAP_token_validator.git
+cd app
+npm install
+node index.js
+
+Para correr con Docker
+docker build -t murruni/tap_token_validator .
+docker run --name tap_token_validator -p 8080:3000 -d murruni/tap_token_validator:latest
+
+Para obtener desde DockerHub (acceso público)
+docker pull murruni/tap_token_validator
+
+Para pruebas importar en Postman el archivo postman_collection.json
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+JWT Detalle
+
 https://jwt.io/
 SECRET: Klave muy secreT4
 
