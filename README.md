@@ -9,11 +9,11 @@
   * Requiere:
     * Token JWT en el header del request.
   * Retorna:
-    * HTTP code 200 si es válido.
+    * HTTP code 200 si es válido. <br />
       Datos en body { “sub” : “_user_”, “name” : “_username_” ,“admin” : true/false }
-    * HTTP code 400 si el request está mal formado.
+    * HTTP code 400 si el request está mal formado. <br />
       Mensaje de error en el body { “error” : “error message” }
-    * HTTP code 401 si el token no es válido.
+    * HTTP code 401 si el token no es válido. <br />
       Mensaje de error en el body { “error” : “error message” }...
 
 ### Ejecución
@@ -33,13 +33,13 @@
 
 ---
 
-JWT Detalle
+### JWT Detalle
 
-https://jwt.io/
-SECRET: Klave muy secreT4
-
-sub: subject (usuario del sistema)
-admin: indica si es administrador del sistema, agregado en el response
+* https://jwt.io/ 
+* Datos
+  * SECRET: Klave muy secreT4
+  * sub: subject (usuario del sistema) user1, user2, admin
+  * admin: indica si es administrador del sistema (agregado en el response)
 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMSIsIm5hbWUiOiJVc3VhcmlvIDEifQ.p-81M-mAceOS-m3RR8_TfVDd6p5YqPJtIcyZz3SlxLg
 {
