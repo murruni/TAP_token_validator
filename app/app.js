@@ -19,7 +19,7 @@ app.use('/', require('./token.route'));
 
 // middleware for others routes and verbs
 app.all('/*', function (req, res, next) {
-    res.status(501).send('No implementado');
+    res.status(501).send({ error: 'No implementado' });
     return (next);
 });
 
