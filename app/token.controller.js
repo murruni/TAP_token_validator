@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secret = process.env.jwt_secret || 'Klave muy secreT4';
+const secret = process.env.JWT_SECRET || 'Klave muy secreT4';
 
 exports.validate = (req, res, next) => {
     var token = req.headers['authorization'];

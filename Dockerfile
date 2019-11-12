@@ -8,8 +8,9 @@ COPY ./app/app.js              /microservice
 COPY ./app/token.controller.js /microservice
 COPY ./app/token.route.js      /microservice
 
-ENV port=3000
-EXPOSE 3000
+ENV JWT_SECRET = 'Klave muy secreT4'
+ENV PORT = 3001
+EXPOSE 3001
 
 RUN npm install
 CMD node index.js

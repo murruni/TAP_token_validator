@@ -1,5 +1,5 @@
 {
-  "name": "TAP_token_validator",
+  "name": "tap_token_validator",
   "version": "1.0.0",
   "description": "Tecnicas Avanzadas de Programacion - Veraz - Token validator",
   "main": "index.js",
