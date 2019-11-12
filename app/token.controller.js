@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secret = process.env.JWT_SECRET || 'Klave muy secreT4';
+const SECRET = process.env.JWT_SECRET || 'Klave muy secreT4';
 
 exports.validate = (req, res, next) => {
     var token = req.headers['authorization'];
@@ -10,7 +10,7 @@ exports.validate = (req, res, next) => {
 
     token = token.replace('Bearer ', '');
 
-    jwt.verify(token, secret, function (err, user) {
+    jwt.verify(token, SECRET, function (err, user) {
         if (err) {
             res.status(401).send({ error: 'Invalid Token' })
         } else {

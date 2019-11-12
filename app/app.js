@@ -7,13 +7,13 @@ var app = express();
 // middlewares compress all responses & parse application/json
 app.use(compression());
 app.use(bodyParser.json());
-
+/*
 // middleware log to console all request
 app.use((req, res, next) => {
     console.log(`${req.method}: ${req.path}`);
     next();
 });
-
+*/
 // middleware api routes
 app.use('/', require('./token.route'));
 

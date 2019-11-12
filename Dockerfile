@@ -8,8 +8,8 @@ COPY ./app/app.js              /microservice
 COPY ./app/token.controller.js /microservice
 COPY ./app/token.route.js      /microservice
 
-ENV JWT_SECRET = 'Klave muy secreT4'
-ENV PORT = 3001
+ENV JWT_SECRET='Klave muy secreT4'
+ENV PORT=3001
 EXPOSE 3001
 
 RUN npm install
