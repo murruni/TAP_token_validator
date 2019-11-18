@@ -6,8 +6,12 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
-    "jsonwebtoken": "^8.5.1",
-    "express": "^4.17.0"
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murruni/tap_token_validator.git"
   },
   "author": "Pablo Murruni <murruni@gmail.com>",
   "license": "ISC"

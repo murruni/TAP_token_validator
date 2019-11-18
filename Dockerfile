@@ -1,12 +1,15 @@
-FROM node:10
+FROM node:12.13.0
 
 WORKDIR /microservice
 
-COPY ./app/package.json        /microservice
-COPY ./app/index.js            /microservice
-COPY ./app/app.js              /microservice
-COPY ./app/token.controller.js /microservice
-COPY ./app/token.route.js      /microservice
+COPY ./app/package.json      /microservice
+COPY ./app/package-lock.json /microservice
+COPY ./app/index.js          /microservice
+COPY ./app/app.js            /microservice
+COPY ./app/controllers       /microservice/controllers
+COPY ./app/utils             /microservice/utils
+COPY ./app/routes            /microservice/routes
+COPY ./app/models            /microservice/models
 
 ENV JWT_SECRET='Klave muy secreT4'
 ENV PORT=3001
